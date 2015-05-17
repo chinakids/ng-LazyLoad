@@ -1,0 +1,24 @@
+{
+  "name": "ng-LazyLoad",
+  "main": "ng-LazyLoad.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chinakids/ng-LazyLoad",
+  "authors": [
+    "chinakids <494063570@qq.com>"
+  ],
+  "description": "angular图片延迟加载指令",
+  "keywords": [
+    "angular",
+    "ng",
+    "img",
+    "lazyload"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,4 +1,8 @@
-angular.module('lazyLoad', [''])
+/*
+    效果不完美，等待修改
+ */
+
+angular.module('ngLazyLoad', [''])
 .directive('lazySrc', ['$window', '$document', function(win, $doc) {
     var $win = angular.element(win),
             doc = $doc[0],
@@ -61,7 +65,7 @@ angular.module('lazyLoad', [''])
                 }
             }
     return {
-        restrict: 'A',//仅可以使用  attr  
+        restrict: 'A',//仅可以使用  attr
         scope: {},//独立的scope
         link: function($scope, $elem, attrs) {
             $elem[0].style.cssText && $elem.data('cssText',$elem[0].style.cssText);
