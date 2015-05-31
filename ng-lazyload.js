@@ -3,8 +3,8 @@
  */
 
 angular.module('ngLazyLoad', [''])
-.directive('lazySrc', ['$window', '$document', function(win, $doc) {
-    var $win = angular.element(win),
+.directive('lazySrc', ['$window', '$document', function($win, $doc) {
+    var win = angular.element($win),
         doc = $doc[0],
         isLazyLoading = false,
         //用来维护当前需要lazyload的图片集合
@@ -46,8 +46,8 @@ angular.module('ngLazyLoad', [''])
             if (i >= 0 && item) {
                 return isVisible(item.elem) ? item.load(i) : false; //指定检查，返回是否显示
             } else if (elements.size() == 0) {//全部显示之后，解除绑定
-                $win.off('scroll', checkImage);
-                $win.off('resize', checkImage);
+                win.off('scroll', checkImage);
+                win.off('resize', checkImage);
                 isLazyLoading = false;
             } else {
                 angular.forEach(elements.get(), function(item, key) {//循环检查
@@ -60,8 +60,8 @@ angular.module('ngLazyLoad', [''])
         initLazyLoad = function() {
             if (isLazyLoading === false) {
                 isLazyLoading = true;
-                $win.on('scroll', checkImage);
-                $win.on('resize', checkImage);
+                win.on('scroll', checkImage);
+                win.on('resize', checkImage);
             }
         }
     return {
