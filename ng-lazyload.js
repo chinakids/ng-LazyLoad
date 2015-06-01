@@ -39,7 +39,7 @@ angular.module('ngLazyLoad', [''])
                 var y = rect.left > 0 && (rect.left + rect.width / 3) < Math.max(doc.documentElement.clientWidth, win.innerWidth || 0);
                 ret = x && y;
             }
-            return  ret;
+            return ret;
         },
         //每次scroll时，调用checkImage，循环检查图片
         checkImage = function(evt, i, item) {
